@@ -10,21 +10,34 @@
             $this->harga = $harga;
             $this->prosesor = $prosesor;
             $this->sistemOperasi = $sistemOperasi;
-
         }
         public function getLabel() {         
-            return "$this->harga,
+            return "
                     $this->prosesor,
                     $this->sistemOperasi";
         }
     }
-    // dibawah pemanggilan property di ubah ,jadi tinggal masukin nilainya dan akan dikirimke function __construct
-    $laptop = new Produk(1000000,"AMD ryzen 53th Gen","Linux");
+
+
+    class cetakInfoProduk {
+        public function cetak( Produk $produk ) {
+            $str = "(Rp.{$produk->harga}){$produk->getLabel()}";
+            return $str;    
+        }
+    }
+    // dibawah pemanggilan property di ubah ,jadi tinggal masukin nilainya dan akan dikirim ke function __construct
+    $laptop = new Produk(10000000,"AMD ryzen 53th Gen","Linux");
     $komputer = new Produk(12000000,"Intel i3 8th Gen","Windows 10");
 
 
     // dibwah pmaggilan method
-    echo "Laptop dengan spesifikasi : " . $laptop->getLabel();
+    echo "Laptop dengan spesifikasi : ".$laptop->harga.$laptop->getLabel();
     echo "<br>";
-    echo "komputer dengan spesifikasi : " . $komputer->getLabel();
+    echo "komputer dengan spesifikasi : ".$komputer->harga.$komputer->getLabel();
+    // mencetak info produk
+    $infoProduk = new cetakInfoProduk();
+    echo " <h3> Mencetak invoice dari produk</h3>";
+    echo $infoProduk->cetak($laptop);
+    echo "<br>";
+    echo $infoProduk->cetak($komputer);
 ?>
