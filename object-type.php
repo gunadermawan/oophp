@@ -3,7 +3,7 @@
         public  $harga = 0,
                 $prosesor = "intel i7'10th Gen",
                 $sistemOperasi = "Linux";
-        // dibawah ini adalah kosnturktor
+        // dibawah ini adalah kosnturktor istimewa
         public function __construct($harga,$prosesor,$sistemOperasi){
             // jadi knp dikasi $this karena paameter di kosntruktor itu kn variabel lokal,biar nilainya
             // sama kayak yg di variabel atau property class,maka dikasi $this->harga
@@ -12,13 +12,13 @@
             $this->sistemOperasi = $sistemOperasi;
         }
         public function getLabel() {         
-            return "
+                    return "
                     $this->prosesor,
                     $this->sistemOperasi";
         }
     }
 
-
+// dibawah ini pembuatan kelas baru dalam satu file
     class cetakInfoProduk {
         public function cetak( Produk $produk ) {
             $str = "(Rp.{$produk->harga}){$produk->getLabel()}";
