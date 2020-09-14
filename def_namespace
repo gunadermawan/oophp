@@ -1,0 +1,4 @@
+1.  adalah cara untuk mengelompokan program kita kedalam sebuah package 
+    tersendiri
+2.  karena PHP ga ngijinin untuk 2 class dgn nama yang sama,biar kalo kerja bareng ngga bingungin buat nama class nya
+3.  

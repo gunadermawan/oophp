@@ -1,0 +1,3 @@
+-> tujuanya adalah untuk menciptakan hubungan hirarki kayak orang tua dan anakknya (parent and child)
+-> child class yang terbentuk nanti akan mewarisi parent class nya,seperti penggunaan property dan method dengan syrat kelasnya visible
+-> child class dibuat untuk memperluas atau (extends) fungsionalitas dari parent class nya

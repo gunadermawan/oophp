@@ -1,0 +1,6 @@
+1.adalah kelas abstarak yang tidak memiliki samsek implementasi
+2.murni mrpkn template untuk kelas turunanya
+3.tidak boleh memiliki property,hanya method saja
+4.semua method harus dalam visibility public
+5.bolehh mendeklarasikan __construct
+6.satu kelas boleh mengimplementasikan banyak interface

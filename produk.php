@@ -25,6 +25,7 @@
         }
     }
     // dibawah pemanggilan property
+    // property = new property itu namnanya instansiasi
     $laptop = new Produk();
     $laptop->harga = 1000000;
     $laptop->prosesor ="AMD Ryzen 5 3th Gen";

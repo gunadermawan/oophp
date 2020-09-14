@@ -1,0 +1,32 @@
+kelas abstrak adalah kelas yang tidak bisa diturunkan atau pewarisan (inheritanse)
+-> setiap kelas abstrak harus memiliki minimal satu method abstrak
+-> sampel
+kelas abstrak dibuat untuk merepresentasikan dalam kehiudpan nyata juga ,misal untuk merasakan rasa buah ,kita harus tau kan buah apa yang mau kita makan ,
+ngga mungkin semua rasa buah itu samaan,kayak orang pacaran aja semuanya serba samaan wkwkwkw
+
+
+
+        abstrak class Buah {
+            protected keyboard;
+            abstrak public function makan () {
+                // memakan buah
+                // merasakan rasa buah
+            }
+        }
+
+        class Apel extends Buah {
+            public function makan() {
+                // memakan buah
+                // merasakan rasa buah
+            }
+        }
+
+        class Jeruk extends Buah {
+            public function makan() {
+                // memakan buah
+                // merasakan rasa buah
+            }
+        }
+
+        karena class Buah adalah class abstrak,maka tidak bisa di instansiasi 
+        X  $this->Buah = new Buah(); X

@@ -3,7 +3,7 @@
 <!-- protected-> property hanya bisa diakses oleh kelas pemilik prooperty itu saja,turunanya tidak berlaku -->
 <?php
     class Produk {
-        public  
+        private  
                 $prosesor = "intel i7'10th Gen",
                 $sistemOperasi = "Linux";
         protected $diskon = 0;
@@ -27,6 +27,20 @@
             // laptop akan tampil -> harga,processor dan sistem operasi serta ada tambahan berupa jenis penyimpanan
             $str = " (Rp.{$this->harga}) | {$this->getLabel()}";
             return $str;    
+        }
+        // dibawah ini contoh dari getter
+        public function getProsesor() {
+            return $this->prosesor;
+        }
+        public function getSistemOperasi() {
+            return $this->sistemOperasi;
+        }
+        // dibawah ini contoh setter buat merubah isi dari property dari luar class
+        public function setProsesor($prosesor) {
+            return $this->prosesor = $prosesor;
+        }
+        public function setsistemOperasi($sistemOperasi) {
+            return $this->sistemOperasi = $sistemOperasi;
         }
 
         public function diskon($diskon) {
@@ -86,4 +100,10 @@
     echo $laptop->getHarga();
     echo "<br>";
     echo $komputer->getHarga();
+    echo "<br>";
+    echo "<hr>";
+    echo "dibawah mengakses dengan getter";
+    echo "<br>";
+    $laptop->setsistemOperasi("sistem operasi baru");
+    echo $laptop->getSistemOperasi();
 ?>

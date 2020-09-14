@@ -30,7 +30,6 @@
             return $str;    
         }
     }
-
     // membuat class extends atau class yang berturunan dari kelas lain
     class Laptop extends Produk {
             public function getLabelProduk() {
